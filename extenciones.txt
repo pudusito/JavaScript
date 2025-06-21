@@ -1,0 +1,17 @@
+* Quokka.js (ctrl+shift+p)
+
+* Bracket Pair Colorizer 2(se volvio nativo en VS)
+
+* ESLint
+
+* Prettier - Code Formatter
+
+* Debugger for Chrome(se volvio nativo en VS)
+
+* Better Comments
+
+* IntelliCode(autocompleta el codigo)
+
+* Live Server
+
+* Quokka Statusbar Buttons

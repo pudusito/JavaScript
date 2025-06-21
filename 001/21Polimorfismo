@@ -1,0 +1,72 @@
+//Object.prototype.
+
+//clase padre
+class Persona_Clase extends Object{ //object es la clase padre de todas las clases en js
+    constructor(nombre,apellido){
+        super(nombre , apellido) //esto es como en python, no es necesario definir el contructor en la clase padre, ya que por default hereda de Object como se ve arriba.
+        this._nombre = nombre;
+        this._apellido = apellido;
+    }
+
+    get nombre(){
+        return this._nombre;
+    }
+
+    set nombre(nombre){
+        this._nombre = nombre;
+    }
+
+    get apellido(){
+        return this._apellido;
+    }
+
+    set apellido(apellido){
+        this._apellido = apellido;
+    }
+
+    nombreCompleto(){
+        return this._nombre + ' ' + this._apellido;
+    }
+    //soobrescritura de metodo toostring, este metodo se hereda de object.
+    toString(){
+                //se aplica polimorfismo(multiples formas en tiempo de ejecucion )
+            //el metodo que se ejecuta depende si es una referencia de tipo padre o hija. es decir, depende quien lo intancie.
+        return this.nombreCompleto();
+    }
+};
+
+//clase hija
+class Empleado extends Persona_Clase{
+    constructor(nombre, apellido, departamento){
+        super(nombre, apellido);//llama al constructor de la clase padre
+        this._departamento = departamento
+    }
+
+    get departamento(){
+        return this._departamento
+    }
+
+    set departamento(departamento){
+        this._departamento = departamento
+    }   
+
+    //soobreescritura de metodo
+    nombreCompleto(){
+        return super.nombreCompleto() + ', ' + this._departamento;
+    }
+};
+
+
+//intanciamos la clase padre.
+let persona1 = new Persona_Clase('Juan', 'Perez'); 
+console.log(persona1);
+
+console.log(persona1.toString() );
+
+//intanciamos la clase hija.
+let empleado1 = new Empleado('Max', 'Pawell', 'Sistemas');
+console.log(empleado1)
+console.log(empleado1.nombre) //aqui podemos apreciar como se hereda los metodos de la clase padre
+console.log(empleado1.nombreCompleto() ); //inicializamos el metodo de clase padre, pero se soobrescribe añadiendole departamento en la clase hija.
+
+console.log(empleado1.toString() ); //esto es polimorfismo.

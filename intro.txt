@@ -1,0 +1,38 @@
+JavaScript:
+
+-Es un lenguaje interpretado de alto nivel, lo que significa que no necesita ser compilado antes de ejecutarse. 
+En lugar de eso, es ejecutado directamente por un intérprete (como los motores de los navegadores web: V8 para Chrome, SpiderMonkey para Firefox, etc.).
+
+-Se usa principalmente en el frontend para crear aplicaciones web interactivas y dinámicas.
+-También puede usarse en el backend gracias a Node.js, lo que lo convierte en un lenguaje versátil.
+
+#Node.js:
+
+Es un entorno de ejecución para JavaScript, que permite usarlo fuera del navegador, especialmente en el lado del servidor.
+Node.js utiliza el motor V8 (el mismo que Chrome) para ejecutar JavaScript, pero también incluye APIs adicionales para manejar tareas del servidor como acceso al sistema de archivos, redes y bases de datos.
+Esto lo hace ideal para aplicaciones como servidores web, APIs REST, y sistemas en tiempo real.
+
+
+#Frameworks/librerías frontend:
+
+*React: Una biblioteca de JavaScript desarrollada por Facebook. Se usa para construir interfaces de usuario (UI) basadas en componentes. Muy popular por su enfoque declarativo y su capacidad para manejar aplicaciones dinámicas y grandes.
+*Vue.js: Un framework progresivo para construir interfaces de usuario. Es fácil de aprender y usar, con una curva de aprendizaje menos pronunciada que React o Angular, ideal para principiantes y proyectos pequeños a medianos.
+*Angular: Un framework completo desarrollado por Google, usado para construir aplicaciones web robustas y de gran escala. Angular tiene una curva de aprendizaje más alta, pero proporciona soluciones integrales para manejar el frontend.
+
+
+
+
+-En resumen:
+*JavaScript puede usarse tanto en el frontend como en el backend.
+*Node.js es un entorno que habilita JavaScript en el backend.
+*React, Vue.js y Angular son herramientas populares para manejar el desarrollo del frontend.
+
+nota: para empezar con javascript es recomendable instalar nodejs(https://nodejs.org/en/download)
+
+
+PD: las carpetas no deben contener caracteres especiales ni espacios.
+
+
+
+
+
