@@ -33,7 +33,7 @@ resultado = x(3, 3);
 console.log(resultado);
 
 /*-------------------------------------------------------------*/
-//funcion de tipo expresion ejemplo 2
+//funcion de tipo expresion(ANONIMA) ejemplo 2
 
 let sumar = function(a,b){return a +b};
 
@@ -110,30 +110,6 @@ function sumarTodo(){
 
 /*-------------------------------------------------------------*/
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* 
 Hoisting:
 -El hoisting en JavaScript es un mecanismo que mueve las declaraciones de variables, funciones y clases al principio de su ámbito antes de ejecutar el código. 
@@ -153,3 +129,131 @@ Este es el entorno que prepara el motor de JavaScript para ejecutar el código.
 
 */
 
+
+
+
+/* ────────────────────────────────────────────────
+   📘 TIPOS DE FUNCIONES EN JAVASCRIPT Y SU USO
+──────────────────────────────────────────────── */
+
+/* 
+1️⃣ FUNCTION DECLARATION
+────────────────────────
+- Sintaxis clásica: function nombre() {}
+- Se eleva (hoisting): se puede llamar antes de declararla.
+- Tiene su propio contexto de `this`.
+- Ideal para funciones reutilizables y definiciones generales.
+
+Ejemplo:
+function saludar() {
+  console.log("Hola");
+}
+
+
+📌 RESUMEN:
+───────────────────────────────────
+✅ Usa FUNCTION DECLARATION cuando:
+- Necesites reutilizar la función en varios lugares.
+- Quieras aprovechar el hoisting.
+
+*/
+
+/* 
+2️⃣ FUNCTION EXPRESSION
+────────────────────────
+- Se guarda en una variable: const nombre = function() {};
+- No se eleva: debe definirse antes de usarse.
+- Tiene su propio contexto de `this`.
+- Útil cuando quieres funciones como datos (callbacks, handlers).
+
+Ejemplo:
+const saludar = function() {
+  console.log("Hola");
+};
+
+📌 RESUMEN:
+───────────────────────────────────
+✅ Usa FUNCTION EXPRESSION cuando:
+- Quieras almacenar funciones en variables, pasar como argumento o usar condicionalmente.
+*/
+
+/* 
+3️⃣ ARROW FUNCTION (Funciones Flecha)
+─────────────────────────────────────
+- Sintaxis compacta: const nombre = () => {};
+- No tiene su propio `this`, `arguments` ni `super`.
+- Hereda el `this` del contexto externo.
+- No apta como método de objetos si se necesita `this`.
+- Ideal para callbacks, funciones pequeñas o dentro de métodos como map, filter, etc.
+
+Ejemplo:
+const saludar = () => {
+  console.log("Hola");
+};
+
+📌 RESUMEN:
+───────────────────────────────────
+✅ Usa ARROW FUNCTION cuando:
+- Necesites una función corta y no uses `this` dentro.
+- Trabajes con callbacks: map, filter, reduce, etc.
+*/
+
+/* 
+4️⃣ MÉTODO DE OBJETO (Object Method)
+────────────────────────────────────
+- Función definida dentro de un objeto con `this`.
+- El `this` hace referencia al objeto que la contiene.
+- Usado para definir comportamiento dentro de objetos.
+
+Ejemplo:
+const persona = {
+  nombre: "Benjamín",
+  saludar() {
+    console.log("Hola, soy " + this.nombre);
+  }
+};
+
+📌 RESUMEN:
+───────────────────────────────────
+✅ Usa MÉTODOS DE OBJETOS cuando:
+- Quieras que `this` se refiera al objeto donde se define.
+*/
+
+/* 
+5️⃣ FUNCIONES ANÓNIMAS (Anonymous Functions)
+────────────────────────────────────────────
+- Son funciones **sin nombre**.
+- Suelen usarse como expresiones o argumentos de otras funciones.
+- No se pueden reutilizar directamente por nombre.
+- Se utilizan comúnmente en callbacks y funciones autoejecutables.
+
+Ejemplo:
+const sumar = function(a, b) {
+  return a + b;
+};
+
+📌 RESUMEN:
+───────────────────────────────────
+✅ Usa FUNCIONES ANÓNIMAS cuando:
+- Necesites una función de un solo uso.
+- Estés trabajando con funciones como argumentos (callbacks, eventos, IIFE).
+*/
+/*───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────*/
+/*
+ todas las funciones en JS son instancias del tipo Function y por eso tienen métodos como .call(), .apply() y .bind():
+
+js
+Copiar
+Editar
+function saludar(nombre) {
+    console.log("Hola " + nombre);
+}
+saludar.call(null, "Benja"); // invoca pasando argumentos uno a uno
+saludar.apply(null, ["Benja"]); // invoca pasando argumentos como arreglo
+📌 RESUMEN:
+
+.call() y .apply() permiten invocar funciones con un this personalizado.
+
+.bind() crea una nueva función con un this fijo.
+
+*/
