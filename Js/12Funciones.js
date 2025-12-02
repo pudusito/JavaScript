@@ -55,7 +55,6 @@ console.log(resultado);
 (3 , 4); //ejecutamos la funcion con ();
 
 /*-------------------------------------------------------------*/
-
 //una funcion es un tipo de dato.
 console.log(typeof miFuncion); 
 

@@ -4,6 +4,7 @@ function Persona(nombre = 'hijo', apellido = 'pe', email = 'hpe@gmail.com', edad
     this.email = email;
     this.edad = edad;
     this.lenguage = lenguage;
+    
     this.nombreCompleto = function(){
         return this.nombre + ' ' + this.apellido;
     }

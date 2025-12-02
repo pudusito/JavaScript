@@ -1,0 +1,12 @@
+#like {
+    background: #2539ac;
+    color: black;
+    border: 0;
+    padding: 4px 8px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+body {
+    background: #4a4b52;
+}
