@@ -1,0 +1,94 @@
+main {
+    text-align: center;
+}
+
+h1 {
+    font-size: 45px;
+    text-align: center;
+}
+
+/* con flex estoy diciendo que como se van a mostrar los elementos que estan dentro de una etiqueta contenedora  */
+nav ul{
+    display: flex; 
+    flex-direction: row; /*row va con justify*/
+    justify-content: center;
+    list-style: none;/*para quitar los puntitos*/
+    text-decoration: none;
+    align-items: center;  /*alinea en horizontal cuando es column*/
+}
+
+li {
+    padding: 10px;
+}
+li a{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+
+nav {
+    background-color: black;
+    padding: 5px;
+}
+
+ul {
+    background-color: lightgray;
+}
+
+body {
+    margin: 0px;
+}
+
+a:hover{
+    background-color: gray;
+    border-radius: 10px;
+}
+
+p {
+    text-align: center;
+}
+figure {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;     /* Centra verticalmente si hay altura */
+    margin: 0 auto;          /* Asegura el centrado si no se usa flex */
+}
+
+figure img {
+    display: block;
+    margin: 0;
+    border-radius: 40%;
+    width: 300px;
+    height: 270px;
+    object-fit: cover;
+}
+
+
+p {
+    text-align: center;
+}
+
+table{width: 100%;
+    border: 20px
+}
+
+
+table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    /*border-spacing: 5px; */
+    padding:5px;
+}
+
+
+caption{ /* modifica el titulo*/
+    color:#e63946;
+    font-family: 'Trocchi', serif;
+    font-size:45px;
+    line-height: 70px; /* ancho de la linea top/bottom*/
+}
+
+th{
+    color: #f1faee;
+    background-color: #1d3557;
+}
