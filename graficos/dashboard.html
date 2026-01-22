@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Animado</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="main-nav">
+        <a href="pacientes/dashboard.html" id="nav-pacientes">Pacientes</a>
+        <a href="gestacion/dashboard.html" id="nav-gestacion">Gestaciones</a>
+        <a href="tests/dashboard.html" id="nav-tests">Tests</a>
+        <a href="parto/dashboard.html" id="nav-parto">Parto</a>
+        <a href="profesionales/dashboard.html" id="nav-profesionales">Profesionales</a>
+        <a href="dashboard.html" id="nav-rn">Recién Nacidos</a>
+    </nav>
+
+    <h1>Dashboard de Recién Nacidos</h1>
+    <div class="dashboard-container">
+        <div class="chart-container">
+            <h2>Distribución por Sexo</h2>
+            <canvas id="sexoChart"></canvas>
+        </div>
+        <div class="chart-container">
+            <h2>Distribución de Peso al Nacer</h2>
+            <canvas id="pesoChart"></canvas>
+        </div>
+        <div class="chart-container">
+            <h2>Puntuación APGAR (5 Minutos)</h2>
+            <canvas id="apgarChart"></canvas>
+        </div>
+        <div class="chart-container">
+            <h2>Destino del Recién Nacido</h2>
+            <canvas id="destinoChart"></canvas>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="app.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const path = window.location.pathname;
+            if (path.includes('/pacientes/')) {
+                document.getElementById('nav-pacientes').classList.add('active');
+            } else if (path.includes('/gestacion/')) {
+                document.getElementById('nav-gestacion').classList.add('active');
+            } else if (path.includes('/tests/')) {
+                document.getElementById('nav-tests').classList.add('active');
+            } else if (path.includes('/parto/')) {
+                document.getElementById('nav-parto').classList.add('active');
+            } else if (path.includes('/profesionales/')) {
+                document.getElementById('nav-profesionales').classList.add('active');
+            } else {
+                // Asume que la raíz es Recién Nacidos
+                document.getElementById('nav-rn').classList.add('active');
+            }
+        });
+    </script>
+</body>
+</html>
